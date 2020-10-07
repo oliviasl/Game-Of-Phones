@@ -1,0 +1,27 @@
+<%- include('partials/header') -%>
+
+<div class="container">
+    <h1 class="title">Add Card</h1>
+
+    <br>
+    <form action="/addCard" method="post" class="centered-div">
+        <div class="">
+            <h5 for="prompt">Prompt</h5>
+            <textarea name="prompt" class="form-control"></textarea>
+        </div>
+        <br>
+        <button class="btn btn-dark" type="submit" name="button">Add Card</button>
+    </form>
+
+    <div class="scroll-view"> 
+        <ul class="centered-ul">
+            <% deck.forEach(function(card) { %>
+            <li><%= card.prompt %></li>
+            <% }); %>
+        </ul>
+    </div>
+
+</div>
+
+
+<%- include('partials/footer') -%>

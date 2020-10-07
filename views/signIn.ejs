@@ -1,0 +1,25 @@
+<%- include('partials/header') -%>
+
+<div class="container home-screen">
+    <h1 class="title" style="margin-top: -10vh;">Sign In</h1>
+
+    <div></div>
+    <p style="text-align: center;">
+        Why are you here silly?
+        Go back to the main site!
+        Only all powerful goddess Olive can access this!
+    </p>
+
+    <form action="addCard" method="post" style="margin-top: 10vh;">
+        <div class="form-group" style="text-align: center;">
+            <label for="password">Password</label>
+            <input name="password" type="password" style="width:300px; margin: auto;" class="form-control">
+        </div>
+        <div class="col text-center">
+            <button class="btn btn-dark" type="submit" style="width: 300px">Sign In</button>
+        </div>
+    </form>
+</div>
+
+
+<%- include('partials/footer') -%>

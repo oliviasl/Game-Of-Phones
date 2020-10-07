@@ -1,0 +1,87 @@
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+.centered-div {
+    text-align: center;
+}
+
+.centered-div textarea {
+    padding: 10px;
+    margin: auto;
+    width: 70%;
+}
+
+.centered-ul {
+    display: table;
+    margin: 0 auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.home-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes fadeInTitle{
+    from {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInButton{
+    from {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.animatedTitle {
+    animation: fadeInTitle ease-in .5s;
+}
+
+.animatedButton {
+    animation: fadeInButton ease-in .5s;
+}
+
+.scroll-view {
+    overflow-y: scroll;
+    height: 275px;
+    border: solid lightgray 1px;
+    width: 70%;
+    margin: auto;
+    margin-top: 25px;
+    padding: 5px;
+}
+
+.title {
+    text-align: center;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+}
+
+footer {
+    position: absolute;
+	text-align: center;
+	bottom: 0;
+	width: 100%;
+	height: 40px;
+}
+
+footer p {
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+}
