@@ -57,36 +57,36 @@ app.get('/addCard', (req, res) => {
 });
 
 app.post('/addCard', (req, res) => {
-    if (req.body.prompt != null){
+    if (req.body.prompt != null) {
+        const newCard = new Card({
+            prompt: req.body.prompt
+        });
+        newCard.save()
         Card.countDocuments({}, (err, result) => {
-            const newCard = new Card({
-                prompt: req.body.prompt
-            });
-            newCard.save();
-            if (deck == null || deck.length != result){
+            if (deck == null || deck.length != result) {
                 Card.find({}, (err, results) => {
                     deck = results;
-                    res.render('addCard', {deck: deck});
+                    res.render('addCard', { deck: deck });
                 });
             } else {
-                res.render('addCard', {deck: deck});
+                res.render('addCard', { deck: deck });
             }
-        });  
+        });
     } else {
         Password.find({}, (err, password) => {
-            if (req.body.password != password[0].pass){
+            if (req.body.password != password[0].pass) {
                 res.redirect('/');
             } else {
                 Card.countDocuments({}, (err, result) => {
-                    if (deck == null || deck.length != result){
+                    if (deck == null || deck.length != result) {
                         Card.find({}, (err, results) => {
                             deck = results;
-                            res.render('addCard', {deck: deck});
+                            res.render('addCard', { deck: deck });
                         });
                     } else {
-                        res.render('addCard', {deck: deck});
+                        res.render('addCard', { deck: deck });
                     }
-                });  
+                });
             }
         });
     }
@@ -97,15 +97,15 @@ app.get('/play', (req, res) => {
     Card.countDocuments({}, (err, result) => {
         var n = Math.floor(Math.random() * result);
         var randCard = deck[n];
-        res.render('gameRoom', {card: randCard});
-    });  
+        res.render('gameRoom', { card: randCard });
+    });
 
 });
 
 
 //ports
 let port = process.env.PORT;
-if(port == null || port == ""){
+if (port == null || port == "") {
     port = 3000;
 }
 app.listen(port, () => {
