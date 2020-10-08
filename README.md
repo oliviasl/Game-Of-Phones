@@ -3,8 +3,8 @@
  
  gameofphones.herokuapp.com
 
-Technologies:
-*Node.js
-*Express.js
-*MongoDB/Mongoose
-*Hosted on Heroku
+## Technologies:
+* Node.js
+* Express.js
+* MongoDB/Mongoose
+* Hosted on Heroku
