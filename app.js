@@ -15,9 +15,8 @@ app.use(bodyParser.urlencoded({
 
 app.use(express.static('public'));
 
-
 //mongoose
-mongoose.connect('mongodb://localhost/gameOfPhonesDB', {
+mongoose.connect('mongodb+srv://admin:mfrem7079@gameofphonesdb.yuoby.mongodb.net/gameOfPhonesDB?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
