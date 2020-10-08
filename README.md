@@ -1,7 +1,7 @@
 # Game Of Phones
  Online version of Game of Phones to make your Zoom icebreakers less awkward :)
  
- [GitHub](gameofphones.herokuapp.com)
+ Website: [gameofphones.herokuapp.com](gameofphones.herokuapp.com)
 
 ## Technologies:
 * Node.js
