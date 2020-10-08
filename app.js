@@ -58,12 +58,11 @@ app.get('/addCard', (req, res) => {
 
 app.post('/addCard', (req, res) => {
     if (req.body.prompt != null){
-        const newCard = new Card({
-            prompt: req.body.prompt
-        });
-        newCard.save()
-
         Card.countDocuments({}, (err, result) => {
+            const newCard = new Card({
+                prompt: req.body.prompt
+            });
+            newCard.save();
             if (deck == null || deck.length != result){
                 Card.find({}, (err, results) => {
                     deck = results;
