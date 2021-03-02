@@ -1,5 +1,5 @@
 # Game Of Phones
- Online version of Game of Phones to make your Zoom icebreakers less awkward :)
+ Online version of Game of Phones to make your Zoom icebreakers less awkward :D
  
 http://gameofphones.herokuapp.com/
 
